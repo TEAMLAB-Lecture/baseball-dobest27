@@ -3,7 +3,7 @@
 import random
 
 
-def get_random_number():
+def get_random_number() -> int:
     # Helper Function - 지우지 말 것
     # 100부터 999까지 수를 램덤하게 반환함
     return random.randrange(100, 1000)
