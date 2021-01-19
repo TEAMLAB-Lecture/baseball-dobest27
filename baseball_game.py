@@ -9,7 +9,7 @@ def get_random_number() -> int:
     return random.randrange(100, 1000)
 
 
-def is_digit(user_input_number):
+def is_digit(user_input_number: str) -> bool:
     # '''
     # Input:
     #   - user_input_number : 문자열 값
@@ -31,7 +31,7 @@ def is_digit(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    result = None
+    result = user_input_number.isdigit()
 
     # ==================================
     return result
