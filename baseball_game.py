@@ -121,7 +121,7 @@ def is_validated_number(user_input_number: str) -> bool:
     return result
 
 
-def get_not_duplicated_three_digit_number():
+def get_not_duplicated_three_digit_number() -> int:
     # '''
     # Input:
     #   - None : 입력값이 없음
@@ -144,7 +144,12 @@ def get_not_duplicated_three_digit_number():
     # get_random_number() 함수를 사용하여 random number 생성
 
     result = None
-    # ==================================
+    while True:
+        num = get_random_number()
+        if is_duplicated_number(str(num)) is False:
+            result = num
+            break
+
     return result
 
 
