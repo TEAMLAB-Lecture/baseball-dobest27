@@ -153,7 +153,7 @@ def get_not_duplicated_three_digit_number() -> int:
     return result
 
 
-def get_strikes_or_ball(user_input_number, random_number):
+def get_strikes_or_ball(user_input_number: str, random_number: str) -> list:
     # '''
     # Input:
     #   - user_input_number : 문자열값으로 사용자가 입력하는 세자리 정수
@@ -180,8 +180,13 @@ def get_strikes_or_ball(user_input_number, random_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
+    user_set = set(user_input_number)
+    random_set = set(random_number)
 
-    result = None
+    strike = sum([user_input_number[i] == random_number[i] for i in range(3)])
+    ball = len(user_set & random_set) - strike
+
+    result = [strike, ball]
     # ==================================
     return result
 
