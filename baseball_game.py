@@ -224,7 +224,7 @@ def is_yes(one_more_input: str) -> bool:
     return result
 
 
-def is_no(one_more_input):
+def is_no(one_more_input: str) -> bool:
     # '''
     # Input:
     #   - one_more_input : 문자열값으로 사용자가 입력하는 문자
@@ -250,8 +250,9 @@ def is_no(one_more_input):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
+    no_input = ["n", "no"]
 
-    result = None
+    result = one_more_input.lower() in no_input
     # ==================================
     return result
 
