@@ -191,7 +191,7 @@ def get_strikes_or_ball(user_input_number: str, random_number: str) -> list:
     return result
 
 
-def is_yes(one_more_input):
+def is_yes(one_more_input: str) -> bool:
     # '''
     # Input:
     #   - one_more_input : 문자열값으로 사용자가 입력하는 문자
@@ -217,8 +217,9 @@ def is_yes(one_more_input):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
+    yes_input = ["y", "yes"]
 
-    result = None
+    result = one_more_input.lower() in yes_input
     # ==================================
     return result
 
